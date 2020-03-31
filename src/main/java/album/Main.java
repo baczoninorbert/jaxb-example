@@ -24,7 +24,6 @@ public class Main {
         album.setTracks(tracks);
 
         JAXBHelper.toXML(album, System.out);
-
         JAXBHelper.toXML(album, new FileOutputStream("album.xml"));
         System.out.println(JAXBHelper.fromXML(Album.class, new FileInputStream("album.xml")));
     }
